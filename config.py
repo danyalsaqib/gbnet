@@ -5,19 +5,19 @@ import os
 from argparse import ArgumentParser
 import numpy as np
 
-ROOT_PATH = '/path/to/GBNet-Supp'
+ROOT_PATH = ''
 
 def path(fn):
     return os.path.join(ROOT_PATH, fn)
 
 def stanford_path(fn):
-    return os.path.join('/path/to/stanford/preprocessed/metadata', fn)
+    return os.path.join('Metadata_Files/', fn)
 
 # =============================================================================
 # Update these with where your data is stored ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-VG_IMAGES = '/path/to/visual/genome/images'
-RCNN_CHECKPOINT_FN = path('checkpoints/vgdet/vg-24.tar')
+VG_IMAGES = 'VGI_All/'
+RCNN_CHECKPOINT_FN = path('checkpoints/vgdet/model_0028000.pth')
 
 IM_DATA_FN = stanford_path('image_data.json')
 VG_SGG_FN = stanford_path('VG-SGG.h5')
